@@ -4,13 +4,6 @@ This project demonstrates how to detect vibrations using the SW-420 vibration se
 
 ---
 
-## 📦 Project Structure
-
-- `firmware/` : Arduino source code (sketch)
-- `hardware/` : (optional) Circuit diagrams or images
-- `docs/` : (optional) Additional documentation
-
----
 
 ## 🔧 Components Used
 
