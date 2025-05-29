@@ -1,4 +1,4 @@
-# 🌱 Soil Moisture Sensor Monitoring / Pemantauan Sensor Kelembaban Tanah
+# 🌱 Soil Moisture Sensor Monitoring 
 
 This project reads soil moisture levels using an analog sensor and provides real-time feedback via the Serial Monitor. It's a simple yet effective way to understand how dry or wet the soil is, which can be useful for smart irrigation or environmental monitoring systems.
 
