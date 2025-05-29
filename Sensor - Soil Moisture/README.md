@@ -1,22 +1,32 @@
-# Embedded System Projects
+# 🌱 Soil Moisture Sensor Monitoring / Pemantauan Sensor Kelembaban Tanah
 
-This is a collection of embedded system projects I've developed using various microcontrollers such as Arduino, ESP32, and STM32. Each project is organized in its own subdirectory and includes code, hardware schematics, and documentation.
+This project reads soil moisture levels using an analog sensor and provides real-time feedback via the Serial Monitor. It's a simple yet effective way to understand how dry or wet the soil is, which can be useful for smart irrigation or environmental monitoring systems.
 
-## 📂 Project List
+## 🔧 Components Used
 
-- [Komunikasi I2C Antar Arduino](./Komunikasi-I2C-Antar-Arduino)
-- [Smart Garbage Bin](./Smart-Garbage-Bin)
-- [IoT Temperature Monitoring](./IoT-Temperature-Monitoring)
-- ... more coming soon!
+- 1x Arduino UNO (or compatible board)
+- 1x Soil Moisture Sensor (analog type)
+- Jumper wires
 
-## 🔧 Technologies Used
+## 🔌 Wiring
 
-- Arduino / ESP32 / ESP8266
-- C / C++ / MicroPython
-- Sensors: DHT11, RFID, Ultrasonic, etc.
-- Communication: I2C, SPI, UART, WiFi, Bluetooth
-- Tools: Arduino IDE
+| Sensor Pin | Arduino Pin |
+|------------|-------------|
+| VCC        | 5V          |
+| GND        | GND         |
+| AOUT       | A0          |
 
-## 📄 License
+> 📌 *Make sure you’re using the analog output (AOUT) of the sensor.*
 
-This repository is licensed under the MIT License.
+## How It Works
+The soil moisture sensor reads analog values from the soil:
+- High value → Dry soil
+- Medium value → Damp soil
+- Low value → Wet soil
+
+The Arduino evaluates the value and prints messages to the Serial Monitor:
+- Above 700 → "Very Dry"
+- 401–700 → "Slightly Dry"
+- 201–400 → "Moist"
+- 0–200 → "Very Wet"
+
