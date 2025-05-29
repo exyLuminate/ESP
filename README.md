@@ -1,6 +1,6 @@
 # Embedded System Projects
 
-This is a collection of embedded system projects I've developed using various microcontrollers such as Arduino, ESP32, and STM32. Each project is organized in its own subdirectory and includes code, hardware schematics, and documentation.
+This is a collection of embedded system projects I've developed using various microcontrollers such as Arduino, ESP32, and ESP8266. Each project is organized in its own subdirectory and includes code, hardware schematics, and documentation.
 
 ## 📂 Project List
 
