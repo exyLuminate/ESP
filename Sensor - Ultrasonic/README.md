@@ -1,12 +1,12 @@
-# 🌡️ DHT22 Temperature and Humidity Monitoring
+# 📏 Ultrasonic Distance Measurement with HC-SR04
 
-This project uses the DHT22 sensor to monitor temperature and humidity in real-time using an Arduino-compatible board.
+This project uses an ultrasonic sensor (e.g., HC-SR04) to measure the distance between the sensor and an object using an Arduino-compatible board.
 
 ---
 
 ## 🔧 Components Used
 
-- 1x DHT22 Temperature & Humidity Sensor
+- 1x HC-SR04 Ultrasonic Sensor
 - 1x Arduino (NodeMCU, ESP8266, Uno, etc.)
 - Jumper wires
 - Breadboard (optional)
@@ -15,20 +15,17 @@ This project uses the DHT22 sensor to monitor temperature and humidity in real-t
 
 ## 🔌 Wiring
 
-| DHT22 Pin | Arduino Pin |
-|-----------|-------------|
-| VCC       | 3.3V or 5V  |
-| DATA      | D3          |
-| GND       | GND         |
-
-📝 Use a 10kΩ pull-up resistor between VCC and DATA if readings are unstable.
+| HC-SR04 Pin | Arduino Pin |
+|-------------|-------------|
+| VCC         | 5V          |
+| GND         | GND         |
+| TRIG        | D0          |
+| ECHO        | D1          |
 
 ---
 
 ## 🧠 How It Works
 
-1. The Arduino reads temperature and humidity data from the DHT22 sensor.
-2. If readings fail (NaN), it prints an error message.
-3. If temperature ≥ 40°C, it gives a warning.
-4. Otherwise, it states that the system is safe.
-
+1. The TRIG pin sends a 10μs HIGH pulse to initiate measurement.
+2. The ECHO pin receives the reflection duration from the object.
+3. Distance is calculated using the speed of sound formula:
